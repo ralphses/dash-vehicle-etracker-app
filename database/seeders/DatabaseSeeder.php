@@ -23,11 +23,11 @@ class DatabaseSeeder extends Seeder
         //     'password' => Hash::make('password'),
         // ]);
 
-        UserVehicleEntry::create([
-            'driver_name' => 'driver name',
-            'parking_space_id' => 1,
-            'status' => 'IN',
-            'user_vehicle_id' => 1
-        ]);
+        // UserVehicleEntry::create([
+        //     'driver_name' => 'driver name',
+        //     'parking_space_id' => 1,
+        //     'status' => 'IN',
+        //     'user_vehicle_id' => 1
+        // ]);
     }
 }

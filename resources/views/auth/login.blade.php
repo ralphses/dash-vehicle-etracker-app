@@ -3,7 +3,7 @@
     <x-header />
    
     <div class="bg-gradient-to-b from-green-600 to-green-800">
-        <div class="container mx-auto px-6 lg:px-20 py-20">
+        <div class="container mx-auto px-6 lg:px-10 py-5">
             <div class="text-center text-white">
                 <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-4">Admin Login</h1>
                 <p class="text-lg lg:text-xl mb-8">Enter your credentials to access the admin dashboard.</p>

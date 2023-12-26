@@ -20,9 +20,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 Route::get('/about', function () {
     return view('about');
+});
+
+Route::controller(UserVehicleEntryController::class)->prefix('vehicle-entry')->group(function () {
+    Route::match(['post', 'get'], '/check', 'entry')->name('vehicle.entry');
+    Route::match(['post', 'get'], '/add', 'add')->name('vehicle.entry.new');
+    Route::match(['put', 'get'], '/view', 'update')->name('vehicle.entry.update');
 });
 
 Route::middleware('auth')->prefix('dashboard')->group(function () {
@@ -50,12 +56,10 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
             Route::delete("/{vehicle}", "delete")->name('vehicles.delete');
         });
     });
-
-
 });
 
 Route::controller(UserVehicleController::class)->prefix('vehicle')->group(function () {
-    Route::get("/", "create");
+    Route::get("/", "create")->name('vehicle.register');
     Route::post("/", "store")->name('vehicle.register');
 });
 

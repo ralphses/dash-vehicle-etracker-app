@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_vehicle_id');
             $table->timestamp('time_out')->nullable();
-            $table->string('status');
+            $table->string('status')->default('IN');
             $table->unsignedBigInteger('parking_space_id');
             $table->string('driver_name')->nullable();
             $table->timestamps();

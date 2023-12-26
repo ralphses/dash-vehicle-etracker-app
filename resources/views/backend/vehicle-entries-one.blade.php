@@ -8,7 +8,7 @@
             <p><strong>Time In:</strong> {{ $entry->created_at }}</p>
             <p><strong>Time Out:</strong> {{ $entry->time_out ?? '----' }}</p>
             <p><strong>Status:</strong> {{ $entry->status }}</p>
-            <p><strong>Parking Space:</strong> {{ $entry->parking_space }}</p>
+            <p><strong>Parking Space:</strong> {{ $entry->space->name }}</p>
             <p><strong>Driver Name:</strong> {{ $entry->driver_name }}</p>
             <p><strong>Owner name:</strong> {{ $entry->vehicle->full_name }}</p>
             <p><strong>Owner phone number:</strong> {{ $entry->vehicle->phone_contact }}</p>

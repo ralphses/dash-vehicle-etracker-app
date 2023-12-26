@@ -14,8 +14,9 @@ class UserVehicleController extends Controller
         $vehicles = UserVehicle::paginate(15);
         return view('backend.vehicle-all', compact('vehicles'));
     }
-    public function create()
+    public function create(Request $request)
     {
+        if ($request->number) session()->flash('number', $request->number);
         return view("guest.vehicle.register");
     }
 
@@ -33,7 +34,8 @@ class UserVehicleController extends Controller
 
     public function store(VehicleRegistrationRequest $request)
     {
-        $validate = $request->validated();
+
+        $request->validated();
 
         // If validation passes, create a new UserVehicle
         UserVehicle::create([
@@ -56,10 +58,12 @@ class UserVehicleController extends Controller
 
     public function vehicle(Request $request)
     {
-        $vehicle = UserVehicle::where('vehicle_registration_number', $request->vehicle)->first();
+        $vehicle = UserVehicle::where('vehicle_registration_number', $request->input('vehicle'))->first();
+
         if ($vehicle) {
             return response()->json(['success' => true, 'data' => $vehicle]);
         }
-        return response()->json(['success' => false, 'data' => "Vehicle with plate number " . $request->vehicle . " NOT FOUND"], 404);
+
+        return response()->json(['success' => false, 'data' => "Vehicle with plate number {$request->input('vehicle')} NOT FOUND"], 404);
     }
 }
