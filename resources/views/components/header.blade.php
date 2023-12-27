@@ -27,6 +27,7 @@
     <!-- Mobile navigation menu -->
     <div id="mobile-menu" class="lg:hidden hidden">
         <a href="{{ route('login') }}" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Login</a>
+        <a href="{{ route('vehicle.entry') }}" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Check Vehicle</a>
         <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Contact Us</a>
       
     </div>

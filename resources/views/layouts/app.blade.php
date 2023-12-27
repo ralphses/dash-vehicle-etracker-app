@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Hospital Vehicle Tracking</title>
+    <link rel="stylesheet" href="/build/assets/app-3b76db53.css">
     @vite('resources/css/app.css')
 </head>
 

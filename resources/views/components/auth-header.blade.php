@@ -31,10 +31,10 @@
 
     <!-- Mobile navigation menu -->
     <div id="mobile-menu" class="lg:hidden hidden">
-        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Dashboard</a>
-        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Manage Users</a>
-        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Recent Entries</a>
-        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">System Statistics</a>
+        <a href="{{ route('dashboard') }}" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Dashboard</a>
+        <a href="{{ route('vehicle.entries') }}" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Vehicle Entries</a>
+        <a href="{{ route('spaces') }}" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Parking Spaces</a>
+        <a href="{{ route('vehicles.all') }}" class="block py-2 px-4 text-gray-700 hover:bg-gray-200">Registered Vehicles</a>
         <form action="{{ route('logout') }}" method="POST">
             @csrf
             <button type="submit" class="bg-green-800 block py-2 px-4 text-gray-700 hover:bg-gray-200 w-full text-left">Logout</button>

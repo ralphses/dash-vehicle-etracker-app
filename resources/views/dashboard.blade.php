@@ -1,7 +1,7 @@
 <x-app-layout>
 
     <div class="bg-gradient-to-b from-green-600 to-green-800 h-32">
-        <div class="container mx-auto px-6 lg:px-20 py-9 ">
+        <div class="container mx-auto px-6 lg:px-20 py-10 ">
             <div class="text-center text-white">
                 <h1 class="text-2xl lg:text-4xl font-bold leading-tight mb-4">Admin Dashboard</h1>
                 <p class="text-lg lg:text-xl mb-10">Welcome, Admin! Here's an overview of the system.</p>
